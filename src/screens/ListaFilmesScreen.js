@@ -8,8 +8,8 @@ export default function ListaFilmesScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>
-                Encontre filmes, séries e muito mais...
+            <Text style={styles.titulo}>
+                Filmes disponíveis
             </Text>
 
             <FlatList
@@ -20,7 +20,7 @@ export default function ListaFilmesScreen({ navigation }) {
                         style={styles.card}
                         onPress={() => navigation.navigate('Detalhes', { item })}
                     >
-                        <Image source={{ uri: item.imagem }} style={styles.image} />
+                        <Image source={{ uri: item.imagem }} style={styles.imagem} />
 
                         <View style={styles.info}>
                             <Text style={styles.nome}>{item.nome}</Text>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#141414',
         padding: 15,
     },
-    title: {
+    titulo: {
         color: '#fff',
         fontSize: 18,
         marginBottom: 20,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         alignItems: 'center',
     },
-    image: {
+    imagem: {
         width: 120,
         height: 70,
         borderRadius: 10,
