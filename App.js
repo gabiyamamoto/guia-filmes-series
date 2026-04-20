@@ -38,14 +38,14 @@ function TabNavigator() {
             iconName = focused ? 'film' : 'film-outline';
           } else if (route.name === 'Séries') {
             iconName = focused ? 'tv' : 'tv-outline';
-          } else if (route.name === 'Início') {
+          } else if (route.name === 'Menu') {
             iconName = focused ? 'home' : 'home-outline';
           }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
       })
       } >
-      <Tab.Screen name='Início' component={InicioScreen} />
+      <Tab.Screen name='Menu' component={InicioScreen} />
       <Tab.Screen name='Filmes' component={ListaFilmesScreen} />
       <Tab.Screen name='Séries' component={ListaSeriesScreen} />
     </ Tab.Navigator >
