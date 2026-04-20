@@ -41,49 +41,49 @@ function TabNavigator() {
           } else if (route.name === 'Início') {
             iconName = focused ? 'home' : 'home-outline';
           }
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-        })
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
+      })
       } >
       <Tab.Screen name='Início' component={InicioScreen} />
       <Tab.Screen name='Filmes' component={ListaFilmesScreen} />
       <Tab.Screen name='Séries' component={ListaSeriesScreen} />
     </ Tab.Navigator >
-      )
+  )
 }
 
-      export default function App() {
+export default function App() {
   return (
-      <NavigationContainer>
-        <Drawer.Navigator
-          screenOptions={{
-            drawerStyle: {
-              backgroundColor: '#6d6969',
-              width: 280,
-            },
-            drawerLabelStyle: {
-              color: '#fff',
-              fontSize: 16,
-            },
-            drawerActiveTintColor: '#e50914',
-            drawerInactiveTintColor: '#ccc',
-            headerStyle: {
-              backgroundColor: '#141414',
-            },
-            headerTintColor: '#fff',
-          }}
-        >
-          <Drawer.Screen
-            name='Início'
-            component={TabNavigator}
-          />
-          <Drawer.Screen
-            name='Sobre'
-            component={SobreScreen} />
-          <Drawer.Screen
-            name='Contato'
-            component={ContatoScreen} />
-        </Drawer.Navigator>
-      </NavigationContainer>
-      );
+    <NavigationContainer>
+      <Drawer.Navigator
+        screenOptions={{
+          drawerStyle: {
+            backgroundColor: '#141414',
+            width: 280,
+          },
+          drawerLabelStyle: {
+            color: '#fff',
+            fontSize: 16,
+          },
+          drawerActiveTintColor: '#e50914',
+          drawerInactiveTintColor: '#ccc',
+          headerStyle: {
+            backgroundColor: '#141414',
+          },
+          headerTintColor: '#fff',
+        }}
+      >
+        <Drawer.Screen
+          name='Início'
+          component={TabNavigator}
+        />
+        <Drawer.Screen
+          name='Sobre'
+          component={SobreScreen} />
+        <Drawer.Screen
+          name='Contato'
+          component={ContatoScreen} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
 }
