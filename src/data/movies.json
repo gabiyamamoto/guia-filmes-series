@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nome": "Star Wars: Os Últimos Jedi",
+    "descricao": "A trama segue Rey tentando aprender o balanço da Força com um relutante Luke Skywalker, enquanto Finn e Poe Dameron tentam salvar a Resistência, que está quase sendo destruída pela Primeira Ordem.",
+    "imagem": "https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
+    "categoria": "Ficção científica",
+    "tipo": "filme"
+  },
+  {
+    "id": 2,
+    "nome": "Coraline",
+    "descricao": "Coraline, uma menina curiosa, descobriu uma porta secreta que a leva a um mundo paralelo encantador, mas nem tudo é o que parece.",
+    "imagem": "https://image.tmdb.org/t/p/w500/9BBTo63ANSmhC4e6r62QDVJSEQm.jpg",
+    "categoria": "Animação, Fantasia",
+    "tipo": "filme"
+  },
+  {
+    "id": 3,
+    "nome": "Mulan",
+    "descricao": "Para salvar seu pai, uma jovem corajosa se disfarça de homem e se alista no exército imperial na China.",
+    "imagem": "https://image.tmdb.org/t/p/w500/7JHYhbMbsZ9wC7Bn7DW5eUIjyM8.jpg",
+    "categoria": "Aventura, Animação",
+    "tipo": "filme"
+  },
+  {
+    "id": 4,
+    "nome": "Barbie",
+    "descricao": "Barbie e Ken vivem no mundo perfeito da Barbielândia, até que uma crise existencial os leva ao mundo real.",
+    "imagem": "https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+    "categoria": "Comédia, Fantasia",
+    "tipo": "filme"
+  },
+  {
+    "id": 5,
+    "nome": "The Last of Us",
+    "descricao": "Após uma pandemia devastadora, um sobrevivente é contratado para escoltar uma jovem através dos Estados Unidos.",
+    "imagem": "https://image.tmdb.org/t/p/w500/4U6gVgBwGz9BgVcM3C6rB2jHqU.jpg",
+    "categoria": "Drama, Ação",
+    "tipo": "serie"
+  },
+  {
+    "id": 6,
+    "nome": "John Wick 4",
+    "descricao": "John Wick descobre um caminho para derrotar a Alta Mesa, mas precisa enfrentar novos inimigos perigosos.",
+    "imagem": "https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+    "categoria": "Ação, Suspense",
+    "tipo": "filme"
+  }
+]
