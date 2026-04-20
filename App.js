@@ -6,13 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
 import InicioScreen from './src/screens/InicioScreen';
-import ListarFilmesScreen from './src/screens/ListaFilmesScreen'
-import ListarSeriesScreen from './src/screens/ListaSeriesScreen'
+import ListaFilmesScreen from './src/screens/ListaFilmesScreen'
+import ListaSeriesScreen from './src/screens/ListaSeriesScreen'
 import DetalhesScreen from './src/screens/DetalhesScreen'
 import SobreScreen from './src/screens/SobreScreen'
 import ContatoScreen from './src/screens/ContatoScreen'
-
-import { StackScreen } from 'react-native-screens';
 
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
@@ -20,21 +18,20 @@ const Stack = createNativeStackNavigator();
 
 function FilmesStack() {
   return (
-    <Stack.Navigator screenOptions={{
-      headerStyle: { backgroundColor: '#141414' },
-      headerTintColor: '#fff',
-      headerTitleStyle: { color: '#fff' },
-    }}>
-      <Stack.Screen name='ListaFilmes' component={ListaFilmesScreen} options={{ title: 'Filmes' }}>
-      </Stack.Screen>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name='ListaFilmes' component={ListaFilmesScreen} />
+      <Stack.Screen name='Detalhes' component={DetalhesScreen} />
     </Stack.Navigator>
   )
 }
 
 function TabNavigator() {
   return (
-    <TabNavigator
+    <Tab.Navigator
       screenOptions={({ route }) => ({
+        tabBarActiveTintColor: '#e50914',
+        tabBarInactiveTintColor: 'gray',
+        headerShown: false,
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
           if (route.name === 'Filmes') {
@@ -44,13 +41,11 @@ function TabNavigator() {
           }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#e50914',
-        tabBarInactiveTintColor: 'gray',
-        headerShown: false
       })}>
-      <Tab.Screen name='Filmes' component={ListarFilmesScreen} />
-      <Tab.Screen name='Séries' component={ListarSeriesScreen} />
-    </TabNavigator >
+      <Tab.Screen name='Início' component={InicioScreen} />
+      <Tab.Screen name='Filmes' component={ListaFilmesScreen} />
+      <Tab.Screen name='Séries' component={ListaSeriesScreen} />
+    </Tab.Navigator >
   )
 }
 
@@ -78,28 +73,13 @@ export default function App() {
         <Drawer.Screen
           name='Início'
           component={TabNavigator}
-          options={{
-            drawerIcon: ({ color, size }) => (
-              <Ionicons name="home-outline" size={size} color={color} />
-            ),
-          }}
         />
         <Drawer.Screen
           name='Sobre'
-          component={SobreScreen}
-          options={{
-            drawerIcon: ({ color, size }) => (
-              <Ionicons name="information-circle-outline" size={size} color={color} />
-            ),
-          }} />
+          component={SobreScreen} />
         <Drawer.Screen
           name='Contato'
-          component={ContatoScreen}
-          options={{
-            drawerIcon: ({ color, size }) => (
-              <Ionicons name="mail-outline" size={size} color={color} />
-            ),
-          }}/>
+          component={ContatoScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
