@@ -56,8 +56,8 @@ function TabNavigator() {
       })
       } >
       <Tab.Screen name='Menu' component={InicioScreen} />
-      <Tab.Screen name='Filmes' component={ListaFilmesScreen} />
-      <Tab.Screen name='Séries' component={ListaSeriesScreen} />
+      <Tab.Screen name='Filmes' component={FilmesStack} />
+      <Tab.Screen name='Séries' component={SeriesStack} />
     </ Tab.Navigator >
   )
 }
