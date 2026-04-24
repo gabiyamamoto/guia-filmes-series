@@ -25,6 +25,16 @@ function FilmesStack() {
   )
 }
 
+function SeriesStack() {
+  return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name='ListaSeries' component={ListaSeriesScreen}/>
+      <Stack.Screen name='Detalhes' component={DetalhesScreen}/>
+    </Stack.Navigator>
+  )
+}
+
+
 function TabNavigator() {
   return (
     <Tab.Navigator
